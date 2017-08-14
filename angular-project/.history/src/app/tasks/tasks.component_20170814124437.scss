@@ -1,0 +1,35 @@
+.add-input {
+  width: 30%;
+}
+.add-btn {
+  &:hover {
+    color: #3F51B5;
+  }
+}
+.delete-btn {
+  @extend .add-btn;
+}
+.tasks {
+    width: 30%;
+    .selected {
+      background-color: #5972FF;
+      color: #fff;
+      &:hover {
+        background-color: #3F51B5;
+      }
+    }
+}
+
+.task {
+    cursor: pointer;
+    &:hover {
+      background-color: #DDD;
+    }
+    h3 {
+      font-size: 1.2em;
+    }
+    p {
+      font-size: 0.8em;
+      color: #979797;
+    }
+}

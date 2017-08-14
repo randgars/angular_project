@@ -1,0 +1,38 @@
+<h2>My Tasks</h2>
+<task-search (changeSearchValue)="onChangeSearchValue($event)"></task-search>
+<div>
+  <md-input-container>
+    <input mdInput placeholder="Add task" #taskName >
+  </md-input-container>
+  <button (click)="add(taskName.value); taskName.value=''" md-icon-button><md-icon>add</md-icon></button>
+</div>
+<ul class="tasks">
+  <li *ngFor="let task of filterTasks"
+    (click)="onSelect(task)"
+    [class.selected]="task === selectedTask">
+    <span class="badge">{{task.id}}</span>
+    <span>{{task.name}}</span>
+    <span>{{task.date}}</span>
+    <button class="delete"
+      (click)="delete(task); $event.stopPropagation()">x</button>
+  </li>
+</ul>
+<md-list>
+ <md-list-item
+    *ngFor="let task of filterTasks"
+    (click)="onSelect(task)"
+    [class.selected]="task === selectedTask">
+    <span class="badge">{{task.id}}</span>
+    <span>{{task.name}}</span>
+    <span>{{task.date}}</span>
+    <button class="delete"
+      (click)="delete(task); $event.stopPropagation()">x
+    </button>
+  </md-list-item>
+</md-list>
+<div *ngIf="selectedTask">
+  <h2>
+    {{selectedTask.description}}
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>

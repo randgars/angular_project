@@ -1,0 +1,25 @@
+.tasks {
+    width: 30%;
+    .selected {
+      background-color: #CFD8DC;
+      &:hover {
+        background-color: #BBD8DC;
+      }
+    }
+}
+
+.task {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    &:hover {
+      background-color: #DDD;
+    }
+    h3 {
+      font-size: 1.2em;
+    }
+    p {
+      font-size: 0.8em;
+      color: #979797;
+    }
+}

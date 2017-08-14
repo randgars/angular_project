@@ -1,0 +1,34 @@
+.selected {
+    background-color: #CFD8DC !important;
+}
+
+.tasks {
+    width: 30%;
+}
+
+.task {
+    cursor: pointer;
+}
+
+.task.selected:hover {
+    background-color: #BBD8DC !important;
+    color: white;
+}
+
+.task:hover {
+    color: #607D8B;
+    background-color: #DDD;
+    left: .1em;
+}
+
+.tasks .badge {
+    margin-right: .8em;
+}
+
+button.delete {
+    float: right;
+    margin-top: 2px;
+    margin-right: .8em;
+    background-color: gray !important;
+    color: white;
+}

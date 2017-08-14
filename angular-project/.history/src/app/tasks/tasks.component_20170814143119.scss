@@ -1,0 +1,41 @@
+.add-inputs-container {
+  display: flex;
+  width: 30%;
+}
+.add-input {
+  width: 50%;
+}
+.add-btn {
+  &:hover {
+    color: #3F51B5;
+  }
+}
+.delete-btn {
+  &:hover {
+    color: #000;
+  }
+}
+.tasks {
+    width: 30%;
+    .selected {
+      background-color: #5972FF;
+      color: #fff;
+      &:hover {
+        background-color: #3F51B5;
+      }
+    }
+}
+
+.task {
+    cursor: pointer;
+    &:hover {
+      background-color: #DDD;
+    }
+    h3 {
+      font-size: 1.2em;
+    }
+    p {
+      font-size: 0.8em;
+      color: #979797;
+    }
+}

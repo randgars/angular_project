@@ -1,0 +1,10 @@
+<div id="search-component">
+  <label>Search task: </label>
+  <input #searchBox id="search-box" [(ngModel)]="searchBox.value" (ngModelChange)="onValueChange()"/>
+  <div class="search-result-container">
+    <div *ngFor="let task of tasks | async"
+         (click)="gotoDetail(task); searchBox.value=''" class="search-result" >
+      {{task.name}}
+    </div>
+  </div>
+</div>

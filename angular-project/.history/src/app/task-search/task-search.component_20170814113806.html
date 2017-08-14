@@ -1,0 +1,7 @@
+<div id="search-component">
+  <label>Search: </label>
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+  <md-input-container>
+    <input mdInput placeholder="Favorite food" #searchBox (keyup)="search(searchBox.value)" >
+  </md-input-container>
+</div>

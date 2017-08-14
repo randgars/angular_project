@@ -1,0 +1,45 @@
+.add-task-container {
+  display: flex;
+  .add-task-container__inputs {
+    display: flex;
+    width: 30%;
+    .add-task-container__input {
+      width: 50%;
+    }
+  }
+  .add-task-container__btn {
+    &:hover {
+      color: #3F51B5;
+    }
+  }
+}
+
+.delete-btn {
+  &:hover {
+    color: #000;
+  }
+}
+.tasks {
+    width: 30%;
+    .selected {
+      background-color: #5972FF;
+      color: #fff;
+      &:hover {
+        background-color: #3F51B5;
+      }
+    }
+}
+
+.task {
+    cursor: pointer;
+    &:hover {
+      background-color: #DDD;
+    }
+    h3 {
+      font-size: 1.2em;
+    }
+    p {
+      font-size: 0.8em;
+      color: #979797;
+    }
+}

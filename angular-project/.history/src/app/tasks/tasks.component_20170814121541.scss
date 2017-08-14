@@ -1,0 +1,16 @@
+.tasks {
+    width: 30%;
+    .selected {
+      background-color: #CFD8DC;
+      &:hover {
+        background-color: #BBD8DC;
+      }
+    }
+}
+
+.task {
+    cursor: pointer;
+    &:hover {
+      background-color: #DDD;
+    }
+}
