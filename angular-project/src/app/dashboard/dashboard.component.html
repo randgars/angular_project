@@ -1,8 +1,12 @@
-<h3>Today tasks</h3>
-<div class="grid grid-pad">
-  <a *ngFor="let task of tasks" [routerLink]="['/detail', task.id]" class="col-1-4">
-    <div class="module task">
-      <h4>{{task.name}}</h4>
-    </div>
-  </a>
-</div>
+<h2>Today tasks</h2>
+<md-list class="tasks">
+  <md-list-item
+    class="tasks__task"
+    *ngFor="let task of tasks"
+  >
+    <a [routerLink]="['/detail', task.id]"
+    >
+      {{task.name}}
+    </a>
+  </md-list-item>
+</md-list>
