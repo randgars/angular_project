@@ -18,6 +18,13 @@ import { TaskSearchComponent } from './task-search/task-search.component';
 import { MaterialModule, MdNativeDateModule  } from '@angular/material'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
+import { AddTaskComponent } from './add-task/add-task.component';
+import { ArchiveComponent } from './archive/archive.component';
+
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { StoreModule } from '@ngrx/store';
+
+import { tasks } from './_reducers/task.reducer';
 
 @NgModule({
   declarations: [
@@ -25,7 +32,9 @@ import 'hammerjs';
     TasksComponent,
     TaskDetailComponent,
     DashboardComponent,
-    TaskSearchComponent
+    TaskSearchComponent,
+    AddTaskComponent,
+    ArchiveComponent
   ],
   exports: [
     MdNativeDateModule
@@ -38,7 +47,11 @@ import 'hammerjs';
     AppRoutingModule,
     MaterialModule,
     BrowserAnimationsModule,
-    MdNativeDateModule
+    MdNativeDateModule,
+    StoreModule.forRoot({
+      tasks
+    }),
+    StoreDevtoolsModule.instrument()
   ],
   providers: [
     TaskService

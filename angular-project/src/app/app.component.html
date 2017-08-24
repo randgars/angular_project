@@ -1,6 +1,5 @@
 <h1>{{title}}</h1>
-<nav>
-  <a routerLink="/dashboard" routerLinkActive="active">Today tasks</a>
-  <a routerLink="/tasks" routerLinkActive="active">All tasks</a>
-</nav>
+<button md-button routerLink="/dashboard" routerLinkActive="active">Today tasks</button>
+<button md-button routerLink="/tasks" routerLinkActive="active">All tasks</button>
+<button md-button routerLink="/archive" routerLinkActive="active">Archive</button>
 <router-outlet></router-outlet>

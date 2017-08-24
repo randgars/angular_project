@@ -1,5 +1,5 @@
 <div id="search-component">
   <md-input-container class="search-input">
-    <input mdInput placeholder="Search task" #searchBox (keyup)="search(searchBox.value)" >
+    <input mdInput placeholder="Search task" [(ngModel)]="searchValue" (keyup)="search()" >
   </md-input-container>
 </div>

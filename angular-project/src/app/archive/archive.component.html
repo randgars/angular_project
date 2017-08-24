@@ -1,6 +1,5 @@
-<h2>{{currentDate}}</h2>
 <div *ngIf="!tasks.length">
-  Empty list
+  <p>Empty list</p>
 </div>
 <md-list class="tasks" *ngIf="tasks.length">
   <md-list-item
@@ -13,10 +12,7 @@
     <p md-line>
       {{task.description}}
     </p>
-    <button *ngIf="task.state === 'active'" class="action-btn" md-icon-button (click)="done(task); $event.stopPropagation()">
-      <md-icon>done</md-icon>
-    </button>
-    <button *ngIf="task.state === 'done'" class="action-btn" md-icon-button (click)="reestablish(task); $event.stopPropagation()">
+    <button class="action-btn" md-icon-button (click)="restore(task); $event.stopPropagation()">
       <md-icon>cached</md-icon>
     </button>
     <button class="action-btn" md-icon-button (click)="delete(task); $event.stopPropagation()">

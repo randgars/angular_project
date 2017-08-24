@@ -1,0 +1,24 @@
+<div class="add-task-container">
+  <div class="add-task-container__inputs">
+    <md-input-container class="add-task-container__input">
+      <input [required]="titleRequired" mdInput placeholder="Task" [(ngModel)]="task" >
+      <md-error>
+        The title of the task is required
+      </md-error>
+    </md-input-container>
+    <md-input-container class="add-task-container__input">
+      <input mdInput placeholder="Description" [(ngModel)]="description" >
+    </md-input-container>
+  </div>
+  <md-input-container>
+    <input mdInput [mdDatepicker]="datepicker" [(ngModel)]="date" [hidden]="true">
+  </md-input-container>
+  <md-datepicker></md-datepicker>
+  <button class="add-task-container__date-btn" md-icon-button (click)="openPicker()">
+    <md-icon>event</md-icon>
+  </button>
+
+  <button class="add-task-container__add-btn" (click)="add()" md-icon-button>
+    <md-icon>add</md-icon>
+  </button>
+</div>

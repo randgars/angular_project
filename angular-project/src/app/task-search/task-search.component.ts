@@ -11,10 +11,11 @@ import { Task } from '../task';
 })
 export class TaskSearchComponent {
   tasks: Observable<Task[]>;
+  searchValue: string;
 
   @Output() changeSearchValue: EventEmitter<any> = new EventEmitter();
   
-  search(term: string): void {
-    this.changeSearchValue.emit(term);
+  search(): void {
+    this.changeSearchValue.emit(this.searchValue);
   }
 }

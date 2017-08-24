@@ -1,17 +1,55 @@
-<div *ngIf="task">
+<div *ngIf="task" class="task-detail-container">
   <h2>Task edit</h2>
-  <div>
-      <md-input-container class="add-task-container__input">
-        <input mdInput placeholder="Task" [(ngModel)]="task.name" >
-      </md-input-container>
-      <md-input-container class="add-task-container__input">
-        <input mdInput placeholder="Description" [(ngModel)]="task.description" >
-      </md-input-container>
+  <div class="task-detail-container__inputs">
+    <md-input-container>
+      <input required
+        mdInput
+        placeholder="Task"
+        [(ngModel)]="task.name"
+        [disabled]="task.state !== 'active'">
+      <md-error>
+        The title of the task is required
+      </md-error>
+    </md-input-container>
+    <md-input-container>
+      <input mdInput
+        placeholder="Description"
+        [(ngModel)]="task.description"
+        [disabled]="task.state !== 'active'">
+    </md-input-container>
+    
+    <md-input-container>
+      <input mdInput
+        [(ngModel)]="task.date"
+        disabled>
+    </md-input-container>
+
+    <md-input-container>
+      <input mdInput
+      [mdDatepicker]="datepicker"
+      [(ngModel)]="date"
+      hidden>
+    </md-input-container>
+
+    <md-datepicker></md-datepicker>
+
+    <button md-icon-button
+      (click)="openPicker()"
+      [disabled]="task.state !== 'active'">
+      <md-icon>event</md-icon>
+    </button>
   </div>
-  <button color="primary" (click)="save()" md-raised-button>
+
+  <button color="primary"
+    (click)="save()"
+    md-raised-button
+    [disabled]="!task.name || task.state !== 'active'">
     Save
   </button>
-  <button (click)="goBack()" md-button>
+  <button (click)="goBack()"
+    md-button>
     Cancel
   </button>
+  
+  
 </div>

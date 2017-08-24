@@ -1,0 +1,19 @@
+.add-task-container {
+  display: flex;
+  align-items: center;
+  .add-task-container__inputs {
+    display: flex;
+    width: 30%;
+    .add-task-container__input {
+      width: 50%;
+    }
+  }
+  .add-task-container__add-btn {
+    &:hover {
+      color: #3F51B5;
+    }
+  }
+  .add-task-container__date-btn {
+    @extend .add-task-container__add-btn;
+  }
+}

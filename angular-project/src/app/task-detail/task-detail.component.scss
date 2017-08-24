@@ -1,5 +1,10 @@
-button:disabled {
-  background-color: #eee;
-  color: #ccc; 
-  cursor: auto;
+.task-detail-container {
+  .task-detail-container__inputs {
+    margin-bottom: 20px;
+  }
+  button:disabled {
+    background-color: #eee;
+    color: #ccc; 
+    cursor: auto;
+  }
 }

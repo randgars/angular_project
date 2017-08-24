@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { TaskDetailComponent } from './task-detail/task-detail.component';
+import { ArchiveComponent } from './archive/archive.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'detail/:id',
     component: TaskDetailComponent
+  },
+  {
+    path: 'archive',
+    component: ArchiveComponent
   }
 ];
 
